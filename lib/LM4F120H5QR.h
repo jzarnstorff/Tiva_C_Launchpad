@@ -199,7 +199,7 @@ typedef struct {                                    /*!< WATCHDOG0 Structure    
   */
 
 typedef struct {                                    /*!< GPIOA Structure                                                       */
-  __I  uint32_t  RESERVED0[255];
+  __IO uint32_t  DATA_BITS[255];
   __IO uint32_t  DATA;                              /*!< GPIO Data                                                             */
   __IO uint32_t  DIR;                               /*!< GPIO Direction                                                        */
   __IO uint32_t  IS;                                /*!< GPIO Interrupt Sense                                                  */
