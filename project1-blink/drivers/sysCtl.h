@@ -15,6 +15,6 @@
 /* ================             Function prototypes                ================ */
 /* ================================================================================ */
 
-void sysCtlPeripheralEnable(const uint8_t gpioPortBase, const bool ahb);
+void sysCtlPeripheralEnable(uint8_t gpioPortBase, bool ahb);
 
 #endif /* SYSCTL_H */

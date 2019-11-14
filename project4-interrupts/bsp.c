@@ -1,12 +1,12 @@
 #include <LM4F120H5QR.h>
 #include "bsp.h"
 
-void delay(const int count) {
+void delay(int count) {
 	int clockCounter = 0;
 	while(clockCounter++ < count);
 }
 
-void toggleLED(const int led_color) {
+void toggleLED(int led_color) {
     GPIOF_AHB->DATA ^= led_color;
 }
 
@@ -17,7 +17,7 @@ void LED_GPIOF_AHB_init(void) {
     GPIOF_AHB->DEN    |= (LED_GREEN | LED_BLUE | LED_RED); // set digital enables
 }
 
-void timer0_A_init(const int start_val) {
+void timer0_A_init(int start_val) {
     /* 11.4 Initialization and Configuration
        To use a GPTM, the appropriate TIMERn bit must be set in the RCGCTIMER */
     SYSCTL->RCGCTIMER |= (1U << 0);

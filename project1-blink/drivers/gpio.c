@@ -16,7 +16,7 @@ static bool _GPIOBaseIsValid(uint32_t gpioPortBase) {
 }
 
 
-void GPIODirModeSet(const uint32_t gpioPortBase, const uint8_t gpioPins, const uint8_t gpioDir) {
+void GPIODirModeSet(uint32_t gpioPortBase, uint8_t gpioPins, uint8_t gpioDir) {
     
     if (_GPIOBaseIsValid(gpioPortBase)) {
         GPIOA_STRUCT(gpioPortBase)->DIR |= gpioDir;  /* set direction as output */
@@ -25,14 +25,14 @@ void GPIODirModeSet(const uint32_t gpioPortBase, const uint8_t gpioPins, const u
 }
 
 
-void GPIOTogglePin(const uint32_t gpioPortBase, const uint8_t pin) {
+void GPIOTogglePin(uint32_t gpioPortBase, uint8_t pin) {
 
     if (_GPIOBaseIsValid(gpioPortBase))
         GPIOA_STRUCT(gpioPortBase)->DATA ^= pin;
 }
 
 
-void GPIOWrite(const uint32_t gpioPortBase, const uint8_t gpioPins, const uint8_t value) {
+void GPIOWrite(uint32_t gpioPortBase, uint8_t gpioPins, uint8_t value) {
     
     if (_GPIOBaseIsValid(gpioPortBase))
         GPIOA_STRUCT(gpioPortBase)->DATA_BITS[gpioPins] = value;

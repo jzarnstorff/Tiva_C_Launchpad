@@ -35,8 +35,8 @@
 /* ================             Function prototypes                ================ */
 /* ================================================================================ */
 
-void GPIODirModeSet(const uint32_t gpioPortBase, const uint8_t gpioPins, const uint8_t gpioDir);
-void GPIOTogglePin(const uint32_t gpioPortBase, const uint8_t pin);
-void GPIOWrite(const uint32_t gpioPortBase, const uint8_t gpioPins, const uint8_t value);
+void GPIODirModeSet(uint32_t gpioPortBase, uint8_t gpioPins, uint8_t gpioDir);
+void GPIOTogglePin(uint32_t gpioPortBase, uint8_t pin);
+void GPIOWrite(uint32_t gpioPortBase, uint8_t gpioPins, uint8_t value);
 
 #endif /* GPIO_H */

@@ -7,6 +7,6 @@
 /* ================             Function prototypes                ================ */
 /* ================================================================================ */
 
-void delay(const uint32_t count);
+void delay(uint32_t count);
 
 #endif /* BSP_H */
